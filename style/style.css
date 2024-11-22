@@ -1,0 +1,231 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap');
+
+@font-face {
+    font-family: android;
+    src: url(../font/idroid.otf) format('opentype');
+}
+
+/*
+(raiz da folha de estilo)
+*/
+:root{
+    /*Paleta de cores com o uso de variáveis*/
+    --cor0: #C5EBD6;
+    --cor1: #84E1AD;
+    --cor2 :#3BD17F;
+    --cor3: #2FA866;
+    --cor4: #207647;
+    --cor5: #1B613B;
+    --cor6: #1A5C38;
+    --cor7: #185A36;
+
+    /*Fontes do site*/
+    --fonte-padrao: Arial, verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive
+}
+
+
+/*
+Também se pode estabelecer configurações globais, como por exemplo, para tirar a margem de todos os elementos
+
+*{
+    margin:0px
+}
+    
+*/
+
+
+body{
+    margin: 0px;
+    font-family: var(--fonte-padrao);
+    background-color: var(--cor1);
+}
+
+header{
+    background-image: linear-gradient(to top, var(--cor5), var(--cor2));
+    box-shadow: 0px 1px 7px 1px rgba(0, 0, 0, 0.567);
+}
+header>h1{
+    color: white;
+    font-family: var(--fonte-destaque);
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.804);
+    margin: 0px;
+    padding: 25px;
+    font-size:40px;
+}
+
+header>p{
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.475);
+    margin: 0px;
+    padding-bottom: 25px;
+}
+
+header>nav{
+    padding: 10px;
+}
+
+header>nav>a{
+    color: white;
+    text-decoration: none;
+    padding-right: 15px;
+    font-weight: bold;   
+}
+
+header>nav>a:hover{
+    background-color: var(--cor7);
+    color: rgb(235, 235, 235);
+    padding: 10px;
+    border-radius: 2px;
+
+    /*Adicionar transição para configurações quando usuário passar mouse em cima dos botões*/
+    transition-duration: 0.3s;
+}
+
+main{
+    background-color: white;
+    width: 77%;
+    margin: 0 auto;
+    /*Também poderia ter usado min-width e max-width para tornar o site responsivo*/
+
+    font-family: arial;
+    padding: 25px;
+    padding-bottom: 10px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 1px 3px 1px #00000087;
+}
+
+main>h1{
+    margin: 0px;
+    font-family: var(--fonte-android);
+    color: var(--cor7);
+}
+
+/*Qualquer parágrafo dentro do main, de forma geral, terão essa configuração, em qualquer nível, podendo estar também dentro de outras tags
+Caso usasse > para indicar filho, estaria modificando apenas o p diretamente filho do main*/
+main p{
+    text-indent: 30px;
+    text-align: justify;
+
+    /*Definindo espaçamento entre linhas*/
+    line-height: 1.5;
+}
+
+
+.subtitulo{
+    color: var(--cor7);
+    background-image: linear-gradient(to right, #CCF3DD, transparent);
+    padding-left: 10px;
+    font-family: android;
+}
+
+strong{
+    color: var(--cor7);
+}
+
+.especial{
+    text-decoration: none;
+    color: var(--cor7);
+    font-weight: bold;
+}
+
+.especial::after{
+    content: "\1F517";
+}
+
+.especial:hover{
+    text-decoration: underline;
+    color: var(--cor4);
+}
+picture{
+    display: block;
+    text-align: center;
+}
+
+.full{
+    width: 100%;
+}
+
+aside{
+    background-color: var(--cor0);
+    padding: 20px;
+    padding-top: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 0px #0000009e;
+}
+
+aside>h3{
+    color: white;
+    background-color: var(--cor3);
+    margin-top: 0px;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+aside>ul{
+
+    /*Faz com que os marcadores fiquem dentro do bloco de texto da lista.*/
+    list-style-position: inside;
+
+    /*Definindo marcador e adicionando espaçamento entre marcador e conteúdo*/
+    list-style-type: '\2714\00A0\00A0';
+
+    /*Define a quantidade de colunas da lista*/
+    columns: 2;
+}
+
+li{
+    padding: 3px;
+}
+
+abbr{
+    text-decoration: underline;
+}
+
+footer{
+    background-color: var(--cor6);
+    color: white;
+    font-style: italic;
+    text-align: center;
+}
+
+footer>p{
+    margin-bottom: 0px;
+    padding: 10px;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: rgb(235, 235, 235);
+}
+
+footer strong{
+    color: white;
+}
+
+.video{
+    background-color: var(--cor7);
+    margin: 0px -25px 30px -25px; 
+    display: block;  
+    text-align: center;
+    padding: 20px;
+    height: 600px;
+}
+
+iframe{
+    width: 98%;
+    height: 98%;
+}
