@@ -89,7 +89,7 @@ header>nav>a:hover{
 
 main{
     background-color: white;
-    width: 77%;
+    max-width: 1035px;
     margin: 0 auto;
     /*Também poderia ter usado min-width e max-width para tornar o site responsivo*/
 
