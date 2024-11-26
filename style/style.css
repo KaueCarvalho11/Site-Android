@@ -91,8 +91,6 @@ main{
     background-color: white;
     max-width: 1035px;
     margin: 0 auto;
-    /*Também poderia ter usado min-width e max-width para tornar o site responsivo*/
-
     font-family: arial;
     padding: 25px;
     padding-bottom: 10px;
